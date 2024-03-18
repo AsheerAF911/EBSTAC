@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-top">
+      <div class="logo">Logo</div>
+      <button class="search-btn">Search</button>
+      <button class="navbar-toggle">&#9776;</button>
+    </div>
+    <div class="navbar-bottom">
+      <div class="nav-item first">Home</div>
+      <div class="nav-item">Link 1</div>
+      <div class="nav-item">Link 2</div>
+      <div class="nav-item">Link 3</div>
+      <div class="nav-item">Link 4</div>
+      <div class="nav-item">Link 5</div>
+    </div>
+  </nav>
+  
+  <div class="video-container">
+    <video autoplay muted loop id="video-background">
+      <source src="Videos/Ad Vid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="quotes">
+      <p>Quote 1</p>
+      <p>Quote 2</p>
+      <p>Quote 3</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <script>
+   const navbarToggle = document.querySelector('.navbar-toggle');
+   const navbar = document.querySelector('.navbar');
+   const navbarItems = document.querySelector('.navbar-bottom');
+
+   navbarToggle.addEventListener('click', () => {
+   navbar.classList.toggle('collapsed');
+    });
+  </script>
+</body>
+
+</html>

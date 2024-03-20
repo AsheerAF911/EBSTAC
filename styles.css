@@ -51,9 +51,14 @@ body, html {
       justify-content: center;
     }
   
-    .card {
+    .story-card {
       width: calc(50% - 20px);
       margin: 10px;
+    }
+
+    .category-card {
+      width: calc(50% - 80px); /* Two cards in a row */
+      margin: 20px;
     }
   }
   
@@ -86,10 +91,16 @@ body, html {
     .nav-item.first {
       flex: 5;
     }
+
+    .category-card {
+      flex: 0 1 calc(25% - 40px);
+      margin: 15px;
+    }
+
+    .suggested-topics {
+      display: block; /* Show on larger screens */
+    }
   }
-  
-  
-  
   
   .video-container {
     position: relative;
@@ -177,7 +188,7 @@ body, html {
     justify-content: space-around;
   }
   
-  .card {
+  .story-card {
     flex: 0 1 30%;
     margin: 20px;
     padding: 20px;
@@ -186,12 +197,65 @@ body, html {
     transition: transform 0.3s ease-in-out;
   }
   
-  .card:hover {
+  .card, .category-card:hover {
     transform: scale(1.05);
   }
 
+  .suggested-link:hover{
+    transform: scale(1.05);
+    text-decoration: underline;
+  }
+
+  .category-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .category-card {
+    padding: 10px;
+    text-align: center;
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .category-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .suggested-topics {
+    display: none; /* Hide by default */
+  }
+  
+  .suggested-topics .suggested-heading {
+    text-align: center;
+  }
+  
+  .suggested-topics .suggested-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .suggested-topics .suggested-link {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid blue;
+    border-radius: 20px;
+    text-decoration: none;
+    color: blue;
+    transition: all 0.3s ease-in-out;
+  }
+
   @media only screen and (max-width: 576px) {
-    .card {
-      width: calc(100% - 20px);
+    .story-card {
+      flex: calc(100% - 20px);
+    }
+
+    .category-card {
+      flex: 0 1 calc(100% - 20px); /* One card per row */
     }
   }

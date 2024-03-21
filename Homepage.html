@@ -10,8 +10,6 @@
 <body>
   <nav class="navbar">
     <div class="navbar-top">
-      <div class="logo">Logo</div>
-      <button class="search-btn">Search</button>
       <button class="navbar-toggle">&#9776;</button>
     </div>
     <div class="navbar-bottom">
@@ -25,6 +23,11 @@
   </nav>
   
   <div class="video-container">
+    <img class="company-logo" src="company_logo.png" alt="Company Logo">
+    <button class="search-btn">Search</button>
+    <!--<div class="navbar-top">
+      <button class="navbar-toggle">&#9776;</button>
+    </div>-->
     <video autoplay muted loop id="video-background">
       <source src="Videos/Ad Vid.mp4" type="video/mp4">
       Your browser does not support the video tag.
@@ -73,39 +76,57 @@
     </div>
   </div>
 
-  <h1>Expertise for every industry</h1>
+  <div class="exp">
+    <h1 class="exp-heading">Expertise for every industry</h1>
+  </div>
   <div class="category-cards-container">
     <div class="card category-card">
-      <img src="image1.jpg" alt="Image 1">
-      <h2>Consultancy</h2>
+      <img src="Images/Automobile.jpg" alt="Image 1">
+      <div>
+        <h3>Transportation</h3>
+      </div>
     </div>
     <div class="card category-card">
-      <img src="image2.jpg" alt="Image 2">
-      <h2>Training</h2>
+      <img src="Images/Automobile.jpg" alt="Image 1">
+      <div>
+        <h3>Transportation</h3>
+      </div>
     </div>
     <div class="card category-card">
-      <img src="image2.jpg" alt="Image 2">
-      <h2>jadkah</h2>
+      <img src="Images/Automobile.jpg" alt="Image 1">
+      <div>
+        <h3>Transportation</h3>
+      </div>
     </div>
     <div class="card category-card">
-      <img src="image2.jpg" alt="Image 2">
-      <h2>Heading 4</h2>
+      <img src="Images/Automobile.jpg" alt="Image 1">
+      <div>
+        <h3>Transportation</h3>
+      </div>
     </div>
     <div class="card category-card">
-      <img src="image2.jpg" alt="Image 2">
-      <h2>Heading 5</h2>
+      <img src="Images/Automobile.jpg" alt="Image 1">
+      <div>
+        <h3>Transportation</h3>
+      </div>
     </div>
     <div class="card category-card">
-      <img src="image2.jpg" alt="Image 2">
-      <h2>Heading 6</h2>
+      <img src="Images/Automobile.jpg" alt="Image 1">
+      <div>
+        <h3>Transportation</h3>
+      </div>
     </div>
     <div class="card category-card">
-      <img src="image2.jpg" alt="Image 2">
-      <h2>Heading 7</h2>
+      <img src="Images/Automobile.jpg" alt="Image 1">
+      <div>
+        <h3>Transportation</h3>
+      </div>
     </div>
     <div class="card category-card">
-      <img src="image2.jpg" alt="Image 2">
-      <h2>Heading 8</h2>
+      <img src="Images/Automobile.jpg" alt="Image 1">
+      <div>
+        <h3>Transportation</h3>
+      </div>
     </div>
   </div>
 
@@ -118,6 +139,123 @@
     </div>
   </div>
 
+  <section class="services-section">
+    <div class="service-container">
+      <div class="service-row">
+        <div class="service-column">
+          <h2>Our Services</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia justo sed suscipit varius. Proin ac mauris vel nunc ultricies tincidunt.</p>
+        </div>
+      </div>
+      <div class="service-row">
+        <div class="service-column">
+          <div class="service">
+            <img src="service1.jpg" alt="Service 1">
+            <h3>Service 1</h3>
+            <p>Description of Service 1</p>
+          </div>
+        </div>
+        <div class="service-column">
+          <div class="service">
+            <img src="service2.jpg" alt="Service 2">
+            <h3>Service 2</h3>
+            <p>Description of Service 2</p>
+          </div>
+        </div>
+        <div class="service-column">
+          <div class="service">
+            <img src="service3.jpg" alt="Service 3">
+            <h3>Service 3</h3>
+            <p>Description of Service 3</p>
+          </div>
+        </div>
+        <div class="service-column">
+          <div class="service">
+            <img src="service4.jpg" alt="Service 4">
+            <h3>Service 4</h3>
+            <p>Description of Service 4</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="news-section">
+    <div class="news-container">
+      <div class="news-row">
+        <div class="news-heading-column">
+          <h2 class="heading">News and Updates</h2>
+          <div class="view-more d-none d-md-block">
+            <a href="#" class="btn">View More</a>
+          </div>
+        </div>
+      </div>
+      <div class="news-row">
+        <div class="news-column">
+          <div class="news-card">
+            <h3><a href="#">Headline 1</a></h3>
+            <p><a href="#">Read more <i class="fa fa-arrow-right"></i></a></p>
+          </div>
+        </div>
+        <div class="news-column">
+          <div class="news-card">
+            <h3><a href="#">Headline 2</a></h3>
+            <p><a href="#">Read more <i class="fa fa-arrow-right"></i></a></p>
+          </div>
+        </div>
+        <div class="news-column">
+          <div class="news-card">
+            <h3><a href="#">Headline 3</a></h3>
+            <p><a href="#">Read more <i class="fa fa-arrow-right"></i></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer-section">
+    <div class="career-container">
+      <div class="career-row">
+        <div class="career-column">
+          <p>Some text here</p>
+        </div>
+        <div class="career-column">
+          <a href="#" class="career-btn">Careers</a>
+        </div>
+        <div class="career-column">
+          <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-row">
+        <div class="footer-column">
+          <a href="#"><img src="company_logo.png" alt="Company Logo"></a>
+        </div>
+        <div class="footer-column">
+          <ul class="footer-links">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+            <li><a href="#">Link 5</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <a href="#"><img src="image.png" alt="Image"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
 
 
 
@@ -126,12 +264,12 @@
 
 
   <script>
-   const navbarToggle = document.querySelector('.navbar-toggle');
-   const navbar = document.querySelector('.navbar');
-   const navbarItems = document.querySelector('.navbar-bottom');
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbar = document.querySelector('.navbar');
+    const navbarItems = document.querySelector('.navbar-bottom');
 
-   navbarToggle.addEventListener('click', () => {
-   navbar.classList.toggle('collapsed');
+    navbarToggle.addEventListener('click', () => {
+      navbar.classList.toggle('collapsed');
     });
   </script>
 </body>

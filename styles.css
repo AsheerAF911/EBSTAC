@@ -2,49 +2,66 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: "Neo Sans", Arial
   }
   
   @media only screen and (max-width: 992px) {
-    .navbar {
-      flex-direction: column;
-    }
-  
-    .navbar-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .navbar-bottom {
-      display: none;
-    }
-  
-    .navbar.collapsed .navbar-bottom {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .navbar.collapsed .nav-item {
+    
+    .nav-bar {
+      background-color: transparent;
+      position: absolute;
       width: 100%;
-    }
-  
-    .navbar.collapsed .nav-item.first {
-      width: 70%;
+      top: 0; 
     }
     
-    .search-btn {
+    .navbar-links {
+      display: none;
+      flex-direction: column;
       position: absolute;
-      top: 5%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      background-color: #06213d;
+      top: 0; /* Adjust according to navbar height */
+      left: 0;
+      width: 100%;
+      padding: 10px 0;
+      z-index: 999;
+    }
+    
+    .navbar-links.active {
+      display: flex;
+      
+    }
+    
+    .navbar-toggle {
+      position: absolute;
+      display: block;
+      right: 50px;
+      top: 20px;
+      z-index: 1000;
     }
 
-    
+    .nav-item a{
+      color: white;
+      padding-left: 40px;
+    }
     
     .video-container {
       position: relative;
-      height: 100vh;
     }
+
+    .com-logo{
+      position: absolute;
+      top: 20px;
+      left: 40px;
+      width: 120px;
+      height: auto;
+    }
+    
+    #search-container{
+      position: absolute;
+      top: 20px;
+      left: 330px;
+    }
+
     .contact-row {
       display: flex;
       flex-direction: column;
@@ -58,10 +75,11 @@ body, html {
       flex-direction: column
     }
 
-    .category-cards-container, .service-container {
+    .category-cards-container, .service-container, .cards-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      margin-top: 3rem;
     }
   
     .story-card, .news-column {
@@ -75,8 +93,8 @@ body, html {
     }
 
     .category-cards-container{
-      margin-left: 147px;
-    margin-right: 147px;
+      margin-left: 120px;
+    margin-right: 120px;
     }
 
     .sevice-row {
@@ -101,37 +119,62 @@ body, html {
   
   @media only screen and (min-width: 992px) {
 
-    .navbar {
+    .nav-bar {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+
+    .navbar-links {
+      max-width: 1140px;
+      list-style-type: none;
       display: flex;
-      background-color: white;
-      flex-direction: row;
-      align-items: center;
-    }
-  
-    .navbar-top {
-      display: none;
-    }
-  
-    .navbar-bottom {
-      display: flex;
-      background-color: white;
-    }
-  
-    .nav-item {
-      flex: 1;
-      text-align: center;
-      padding: 10px;
-      color: black;
-    }
-  
-    .nav-item.first {
-      flex: 5;
+      width: 100%;
+      justify-content: flex-end;
+      margin-bottom: 0;
+      padding-left: 450px;
     }
 
-    .search-btn {
+    .nav-item {
+      flex: 2;
+      text-align: center;
+      padding: 0px, 10px;
+      color: black;
+      border-left: 1px solid rgba(39, 59, 77, 0.15);
+      font-size: 14px;
+      list-style: none;
+      font-weight: 700;
+      justify-content: center;
+      line-height: 30px
+      }
+
+    .nav-item a{
+      padding: 5px 25px;
+      color: #000000;
+    }
+    
+    .nav-item.first {
+      flex: 7;
+    }
+
+    .navbar-toggle {
+      display: none;
+    }
+
+    .com-logo{
       position: absolute;
-      top: 10px;
-      right: 70px;
+      top: 60px;
+      left: 40px;
+      width: 120px;
+      height: auto;
+    }
+
+    #search-container{
+      position: absolute;
+      top: 60px;
+      right: 40px;
     }
 
     .category-card {
@@ -152,22 +195,83 @@ body, html {
     }
   }
   
-
+  
+  .nav-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    background-color: #ffffff;
+    left: 0;
+    top: 0
+  }
+  
+  .navbar-toggle {
+    cursor: pointer;
+  }
+  
+  .navbar-links li {
+    margin-right: 20px;
+  }
+  
+  .navbar-links li:last-child {
+    margin-right: 0;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+  }
+  
   .video-container {
     position: relative;
-  }
-  
-  .company-logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    width: 100%;
+    height: 70vh; /* 70% of the viewport height */
+    overflow: hidden;
+    z-index: -1;
+    
   }
 
-  
-  .video-container video {
-    width: 100%;
+  .video-banner-block{
+    overflow: hidden;
+    padding: 0;
+    min-height: 450px;
+    max-height: 850px;
+    background-color: rgba(0, 0, 0, 0.4)
   }
   
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #ffffff; /* Change color to your preference */
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .logo{
+    position: relative;
+    width: 100px;
+    height: auto;
+  }
+
+  .logo-link{
+    position: relative;
+    left: 30px;
+  }
+
+
   .quotes {
     position: absolute;
     top: 50%;
@@ -176,6 +280,15 @@ body, html {
     color: white;
     text-align: center;
   }
+
+  #search-input {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
   
 
   .contact-bar-block{
@@ -200,11 +313,13 @@ body, html {
 
   .exp {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
+    justify-content: center;
+    margin-top: 7rem;
   }
   
   .exp-heading {
     text-align: center; /* Center the text within the heading */
+    font-family: "Neo Sans", Arial
   }
   
 
@@ -246,18 +361,41 @@ body, html {
   .cards-container {
     display: flex;
     justify-content: space-around;
+    margin-top: 3rem;
+    margin-left: 40px;
+    margin-right: 40px;
   }
   
   .story-card {
     flex: 0 1 30%;
     margin: 20px;
-    padding: 20px;
     background-color: #f0f0f0;
-    text-align: center;
+    text-align: left;
     transition: transform 0.3s ease-in-out;
   }
+
+  .story-card img{
+    background-color: white;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .story-content svg{
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+  }
+
+  .story-content{
+    padding: 30px;
+  }
   
-  .card, .category-card:hover {
+  .story-card p{
+    text-align: left;
+  }
+
+  .story-card:hover, .category-card:hover, .news-card:hover {
     transform: scale(1.05);
   }
 
@@ -270,6 +408,7 @@ body, html {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 3rem;
   }
   
   .category-card {
@@ -284,7 +423,12 @@ body, html {
   }
 
   .category-card > div {
-    padding: 30px; /* Add 30px padding to the div containing the heading */
+    padding-top: 30px; 
+    padding-bottom: 30px;
+  }
+
+  .category-card > div > h4{
+    font-size: medium;
   }
 
   .suggested-topics {
@@ -395,6 +539,7 @@ body, html {
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
+    transition: transform 0.3s ease-in-out;
   }
   
   .news-card h3 {
@@ -425,6 +570,7 @@ body, html {
   
   .btn:hover {
     background-color: #007bff;
+    transform: scale(1.05);
   }
 
   .footer-section {
@@ -467,6 +613,7 @@ body, html {
   
   .career-btn:hover {
     background-color: #007bff;
+    transform: scale(1.05);
   }
   
   .social-icons {
@@ -479,21 +626,8 @@ body, html {
     margin: 0 5px;
   }
   
-  .social-icons li a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    color: blue;
-    border: 1px solid blue;
-    border-radius: 50%;
-    text-decoration: none;
-  }
-  
-  .social-icons li a:hover {
-    background-color: blue;
-    color: white;
+  .social-icons li svg:hover {
+    transform: scale(1.05);
   }
 
   .footer {

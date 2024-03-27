@@ -151,7 +151,6 @@ body, html {
       }
 
     .nav-item a{
-      padding: 5px 25px;
       color: #000000;
     }
     
@@ -213,7 +212,8 @@ body, html {
   }
   
   .navbar-links li {
-    margin-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   
   .navbar-links li:last-child {
@@ -288,7 +288,7 @@ body, html {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+  }
   
 
   .contact-bar-block{
@@ -309,6 +309,10 @@ body, html {
   .contact-column {
     flex: 1;
     padding: 0 10px;
+  }
+
+  .service img{
+    transition: transform 0.3s ease-in-out;
   }
 
   .exp {
@@ -395,7 +399,7 @@ body, html {
     text-align: left;
   }
 
-  .story-card:hover, .category-card:hover, .news-card:hover {
+  .story-card:hover, .category-card:hover, .news-card:hover, .service img:hover {
     transform: scale(1.05);
   }
 
@@ -686,6 +690,30 @@ body, html {
   }
 
   @media only screen and (max-width: 576px) {
+
+    #search-container{
+      position: absolute;
+      top: 20px;
+      left: 100px;
+    }
+
+    #search-input {
+      padding: 10px;
+      width: 200px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .com-logo{
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 70px;
+      height: auto;
+    }
+
     .story-card, .news-column {
       flex: calc(100% - 20px);
     }
@@ -696,6 +724,10 @@ body, html {
 
     .service {
       margin-bottom: 20px;
+    }
+
+    .service-column{
+      flex-basis: 0%;
     }
 
     .service-row {

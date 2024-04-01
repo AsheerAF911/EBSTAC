@@ -7,6 +7,9 @@ body, html {
   
   @media only screen and (max-width: 992px) {
     
+    body.navbar-scroll-lock {
+      overflow: hidden;
+    }
     .nav-bar {
       background-color: transparent;
       position: absolute;
@@ -17,11 +20,13 @@ body, html {
     .navbar-links {
       display: none;
       flex-direction: column;
-      position: absolute;
+      position: fixed;
       background-color: #06213d;
       top: 0; /* Adjust according to navbar height */
       left: 0;
       width: 100%;
+      height: 100%;
+      overflow-y: scroll;
       padding: 10px 0;
       z-index: 999;
     }
@@ -101,8 +106,8 @@ body, html {
       flex-wrap: nowrap;
     }
   
-    .service-column {
-      flex-basis: 50%;
+    .service-column, .service-column1 {
+      flex: 1 1 50%;
       max-width: 50%;
     }
 
@@ -120,12 +125,12 @@ body, html {
   @media only screen and (min-width: 992px) {
 
     .nav-bar {
-    background-color: white;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
+      background-color: white;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      }
 
     .navbar-links {
       max-width: 1140px;
@@ -176,6 +181,11 @@ body, html {
       right: 40px;
     }
 
+    .service-column1 .des{
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+
     .category-card {
       flex: 0 1 calc(25% - 40px);
       margin: 15px;
@@ -185,8 +195,9 @@ body, html {
       display: block; /* Show on larger screens */
     }
 
-    .service-column {
+    .service-column, .service-column1 {
       flex: 1;
+      flex: 1 1 33%; /* Each column takes up 33% of the width */
     }
 
     .news-column {
@@ -279,6 +290,14 @@ body, html {
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
+  }
+
+  .quotes h1{
+    font-size: 50px;
+  }
+
+  .quotes p{
+    font-size: 18px;
   }
 
   #search-input {
@@ -462,13 +481,13 @@ body, html {
   }
 
   .services-section {
-    padding: 20px 0;
+    padding: 20px 20px;
     background-color: #F4F5F5
   }
   
   .service-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
   }
   
   .service-row {
@@ -481,7 +500,12 @@ body, html {
   }
   
   .service-column {
-    padding: 0 10px;
+    padding: 10px;
+    max-width: 400px;
+  }
+
+  .service-column1 {
+    padding: 10px;
   }
   
   .service {
@@ -660,10 +684,12 @@ body, html {
   
   .footer-column:first-child {
     text-align: left;
+    max-width: 150px;
   }
   
   .footer-column:last-child {
     text-align: right;
+    max-width: 200px;
   }
   
   .footer-links {
@@ -714,8 +740,21 @@ body, html {
       height: auto;
     }
 
+    .service-column, .service-column1 {
+      max-width: 100%;
+    }
+
     .story-card, .news-column {
       flex: calc(100% - 20px);
+    }
+
+    .category-cards-container {
+      margin-left: 0px; 
+      margin-right: 0px; 
+    }
+
+    .category-card > div > h4 {
+      font-size: larger;
     }
 
     .category-card {
@@ -726,12 +765,14 @@ body, html {
       margin-bottom: 20px;
     }
 
-    .service-column{
+    .service-column, .service-column1{
       flex-basis: 0%;
+      flex: 1 1 100%;
     }
 
     .service-row {
       flex-direction: column;
+      flex-wrap: nowrap;
     }
   }
 

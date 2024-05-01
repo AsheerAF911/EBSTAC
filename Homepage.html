@@ -52,6 +52,7 @@
       </a>
     </div>
     <div id="search-container">
+      <button id="search-button">Search</button>
       <input type="text" id="search-input" placeholder="Search...">
     </div>
     <div class="quotes">
@@ -88,7 +89,7 @@
       <div class="service-row">
         <div class="service-column">
           <div class="service">
-            <img src="Images/Service Images/Magnifying Certificate.png" alt="Service 1">
+            <img src="Images/Service Images/certification.png" alt="Service 1">
             <h3>Certification</h3>
             <p>Unlock credibility and trust with our comprehensive certification solutions.</p>
           </div>
@@ -287,6 +288,22 @@
       navbarLinks.classList.toggle('active');
       body.classList.toggle('navbar-scroll-lock');
     }
+
+    document.getElementById('search-button').addEventListener('click', function(event) {
+      event.stopPropagation(); // Prevent the click event from bubbling up to the document body
+      document.getElementById('search-input').style.display = 'block';
+    });
+
+    document.body.addEventListener('click', function(event) {
+      const searchContainer = document.getElementById('search-container');
+      const searchInput = document.getElementById('search-input');
+
+      // Check if the click target is not inside the search container
+      if (!searchContainer.contains(event.target) && event.target !== searchInput) {
+        searchInput.style.display = 'none';
+      }
+    });
+
   </script>
 </body>
 

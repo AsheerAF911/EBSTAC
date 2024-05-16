@@ -1,0 +1,80 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.hero {
+    background-image: url('ServicePage Images/Brand Image.jpg'); /* Replace 'hero-image.jpg' with your image path */
+    background-size: cover;
+    text-align: center;
+    padding: 100px 20px;
+    color: #ffffff;
+    height: 600px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.services {
+    padding: 50px 20px;
+    text-align: left;
+    margin-top: -100px;
+}
+
+.services h2 {
+    display: flex;
+    font-size: 32px;
+    margin-bottom: 40px;
+    background-color: gray;
+    width: 500px;
+}
+
+
+.service-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}

@@ -65,6 +65,7 @@ body, html {
       position: absolute;
       top: 20px;
       left: 330px;
+      width: 100%;
     }
 
     .contact-row {
@@ -179,6 +180,7 @@ body, html {
       position: absolute;
       top: 60px;
       right: 40px;
+      width: 100%;
     }
 
     .service-column1 .des{
@@ -301,14 +303,32 @@ body, html {
   }
 
   #search-input {
-    padding: 10px;
-    width: 300px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none; /* Hide the input initially */
+    position: absolute;
+    top: 130px !important;
+    transform: none !important;
+    bottom: auto !important;
+    left: 100px;
+    width: 80%;
   }
   
+  #search-button {
+    display: flex;
+    width: 10%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    right: 100px;
+    position: absolute;
+    justify-content: space-between;
+    border-radius: 25px;
+  }
+  
+  #search-button, div{
+    margin: auto;
+    font-size: 17px;
+  }
 
   .contact-bar-block{
     padding-top: 20px;
@@ -330,8 +350,20 @@ body, html {
     padding: 0 10px;
   }
 
-  .service img{
-    transition: transform 0.3s ease-in-out;
+  .description-box {
+    display: none; /* Hide the description box initially */
+    position: absolute;
+    top: 170px !important;
+    right: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    bottom: auto !important;
+    width: 100%; /* Adjust width as needed */
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 999; /* Ensure it appears on top of other content */
+    justify-content: space-evenly;
   }
 
   .exp {
@@ -387,6 +419,10 @@ body, html {
     margin-top: 3rem;
     margin-left: 40px;
     margin-right: 40px;
+  }
+
+  .service img{
+    transition: transform 0.3s ease-in-out;
   }
   
   .story-card {
@@ -721,6 +757,7 @@ body, html {
       position: absolute;
       top: 20px;
       left: 100px;
+      width: 100%;
     }
 
     #search-input {

@@ -21,6 +21,20 @@ header {
     font-weight: bold;
 }
 
+.bttn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .bttn:hover {
+    background-color: #007bff;
+    transform: scale(1.05);
+  }
+
 
 .hero {
     background-image: url('ServicePage Images/Brand Image.jpg'); /* Replace 'hero-image.jpg' with your image path */
@@ -52,24 +66,69 @@ header {
     margin-top: -100px;
 }
 
-.services h2 {
-    display: flex;
-    font-size: 32px;
+.service-head{
     margin-bottom: 40px;
-    background-color: gray;
-    width: 500px;
+    margin-left: 50px;
+    width: 500px;  
+    flex: 5;
+    padding: 20px;
 }
 
+.values-section {
+    display: flex;
+    gap: 20px; /* Adjust the gap between the sections as needed */
+    margin-bottom: 60px;
+}
+
+.value-card {
+    flex: 3;
+    background-color: #ffffff; /* Optional: Add background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 60px;
+    margin-right: 30px;
+}
+
+.service-head .headline {
+    font-size: 20px;
+    padding: 40px;
+    margin-bottom: 10px;
+    background-color: #F4F5F5;
+    margin-bottom: 40px;
+}
+
+.service-head .desc{
+    font-size: 22px;
+    text-align: justify;
+}
+    
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
 
 .service-card {
     background-color: #f4f4f4;
     padding: 20px;
-    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 .service-card h3 {
     font-size: 24px;
     margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 16px;
+}
+
+.service-card:hover{
+    transform: scale(1.05);
 }
 
 footer {

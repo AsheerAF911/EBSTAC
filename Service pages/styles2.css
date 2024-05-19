@@ -68,6 +68,12 @@ body, html {
       width: 100%;
     }
 
+    #search-button{
+      left: 100px;
+    }
+
+    
+
     .contact-row {
       display: flex;
       flex-direction: column;
@@ -174,6 +180,19 @@ body, html {
       top: 60px;
       right: 40px;
       width: 100%;
+    }
+
+    #search-button {
+      display: flex;
+      width: 10%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      cursor: pointer;
+      right: 100px;
+      position: absolute;
+      justify-content: space-between;
+      border-radius: 25px;
     }
 
     .service-column1 .des{
@@ -304,13 +323,11 @@ body, html {
     left: 100px;
     width: 80%;
   }
-  
+
   #search-button {
     display: flex;
     width: 10%;
     padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #fff;
     cursor: pointer;
     right: 100px;
     position: absolute;
